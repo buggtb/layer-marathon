@@ -1,0 +1,5 @@
+options:
+     java_opts:
+        type: string
+        default: ''
+        description: 'Override the default JAVA_OPTS to set memory limits etc.'

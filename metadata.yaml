@@ -1,0 +1,27 @@
+name: layer-marathon
+summary: Marathon Charm
+maintainer: Tom Barber <Tom.Barber@tom-laptop2>
+description: |
+  Marathon container support for Mesos
+tags:
+  # Replace "misc" with one or more whitelisted tags from this list:
+  # https://jujucharms.com/docs/stable/authors-charm-metadata
+  - misc
+subordinate: false
+resources:
+   software:
+      type: file
+      filename: marathon.tgz
+      description: "The Mesos Zipfile"
+series:
+  - xenial
+requires:
+  zookeeper:
+    interface: zookeeper
+  mesos:
+    interface: mesos
+provides:
+  java:
+    interface: java
+    scope: container
+
